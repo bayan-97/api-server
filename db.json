@@ -1,0 +1,23 @@
+{
+  "categories": [
+    {
+      "category": "dress",
+      "id": 2
+    },
+    {
+      "category": "jackets",
+      "id": 4
+    }
+  ],
+  "products": [
+    {
+      "name": "pages",
+      "category": "dress",
+      "description": "blur color",
+      "price": 25,
+      "inStock": 1,
+      "apiId": "v1",
+      "id": 1
+    }
+  ]
+}
