@@ -1,12 +1,16 @@
 {
   "categories": [
     {
-      "category": "dress",
-      "id": 2
+      " name": "man clothes ",
+      "display_name": "hates",
+      "description": "red color",
+      "id": 6
     },
     {
-      "category": "jackets",
-      "id": 4
+      " name": "children clothes ",
+      "display_name": "shoes",
+      "description": "orange color",
+      "id": 7
     }
   ],
   "products": [
