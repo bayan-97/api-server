@@ -8,12 +8,16 @@
   },
   "dependencies": {
     "-": "^0.0.1",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "g": "^2.0.1",
-    "json-server": "^0.16.2"
+    "json-server": "^0.16.2",
+    "mongoose": "^5.10.9",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "@code-fellows/supergoose": "^1.0.11",
     "jest": "^26.5.3",
     "supertest": "^5.0.0"
   },
