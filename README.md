@@ -1,42 +1,54 @@
-LAB - 7
+LAB - 8 
+
 
 Author: bayan alalem
 
 Setup
 `.env `requirements
 PORT - Port Number
-`npm i -D jest ` `npm init -y` `npm i express` `npm i supertest`
+`npm i -D jest ` `npm init -y` `npm i express` `npm i supertest` `npm i mongoose morgn cors` 
 
 ## detailes about files
+### index.js
+1- Require the mongoose library
+ calling start() on my imported server module, it connect to Mongo, via mongoose
+Prepare the server.js for modularization.
 
-1. index.js 
+2- Require the category and product router modules 
+3- app.use() each them in your app so that your routes will respond
+4- Write new routing modules for your server
 
-- it is acting  as the “entry point” to your server.
--  reading PORT from your .env file
-- It should call the .start() method from the server with the PORT set in your environment
+### routes/categories.js and routes/product.js
 
-2. server.js 
+1- Create a router module for each of your data types
+In each
+2- Create an instance of express.Router() and export it
 
- - contain all of the logic for the server
-- we  export an object with a start() method 
+3 Move the appropriate route definitions and route handlers from server.js here
+
+4- Redefine the definitions as route definitions 
+
+## Begin the conversion from memory data to persistent data …
+Import and initialize the appropriate Mongoose Collection (see bullet points below)
+In your handler methods, rather than change your in-memory data store, call the appropriate model methods
+Add Persistence with Mongoose Collections.
+
+Work in lib/models/categories and lib/models/products
 
 
-3. timestamp.js
-- we put the current timestamp on the request object in a property called requestTime
-- Import this into your server and set it up to run at the application level for all routes
+For each, create both a schema and collection file
 
+. categories.schema.js and categories.collection.js
 
-4. logger.js
-- Execute a console.log() containing the request path, method, and the requestTime property of the request object
-- Import this into your server and set it up to run at the application level for all routes
+#The schema file should define your data model as a Mongoose schema
+The collection file should be a class that:
+Imports the schema
 
-5. 404.js
-- Sends a 404/Not-Found message as the response 
-- Import this into your server and set it up to be “used” after your other routes
-
-6. 500.js
-- Sends a 500/Server Error message as the response 
-- Import this into your server and set it up to be “used” as the last route
+Exports a class with CRUD methods, coded to work with your schema
+read() performs a find() query in your schema
+create() performs a save() query in your schema for a new record
+update() performs a findOneByIdAndUpdate() operation in your schema for an existing record
+delete() performs a findOneByIdAndDelete() in your schema for a new record
 
 ## Running the app
 
@@ -154,11 +166,13 @@ Returns Object
 
 Tests
 Unit Tests: npm run test
-![](lab71.PNG)
-![](lab72.PNG)
+![](lab8testCURD.PNG)
+![](lab8testCurd1.PNG)
+![](lab8testserver.PNG)
 ![](lab73.PNG)
 
 
 
+
 UML Diagram
-![](urltestlab7.PNG)
+![](lab8url.PNG)
