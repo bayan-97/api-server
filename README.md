@@ -1,4 +1,4 @@
-LAB - 8 
+LAB - 9
 
 
 Author: bayan alalem
@@ -9,47 +9,16 @@ PORT - Port Number
 `npm i -D jest ` `npm init -y` `npm i express` `npm i supertest` `npm i mongoose morgn cors` 
 
 ## detailes about files
-### index.js
-1- Require the mongoose library
- calling start() on my imported server module, it connect to Mongo, via mongoose
-Prepare the server.js for modularization.
 
-2- Require the category and product router modules 
-3- app.use() each them in your app so that your routes will respond
-4- Write new routing modules for your server
+1. mongo.js
+This will serve as the “master” class for Mongo data collections.
+2. allroute.js
+ In this middleware, dynamically` require() `the data model specified by the model parameter:
+Identify a valid model in the route param
 
-### routes/categories.js and routes/product.js
-
-1- Create a router module for each of your data types
-In each
-2- Create an instance of express.Router() and export it
-
-3 Move the appropriate route definitions and route handlers from server.js here
-
-4- Redefine the definitions as route definitions 
-
-## Begin the conversion from memory data to persistent data …
-Import and initialize the appropriate Mongoose Collection (see bullet points below)
-In your handler methods, rather than change your in-memory data store, call the appropriate model methods
-Add Persistence with Mongoose Collections.
-
-Work in lib/models/categories and lib/models/products
-
-
-For each, create both a schema and collection file
-
-. categories.schema.js and categories.collection.js
-
-#The schema file should define your data model as a Mongoose schema
-The collection file should be a class that:
-Imports the schema
-
-Exports a class with CRUD methods, coded to work with your schema
-read() performs a find() query in your schema
-create() performs a save() query in your schema for a new record
-update() performs a findOneByIdAndUpdate() operation in your schema for an existing record
-delete() performs a findOneByIdAndDelete() in your schema for a new record
-
+we made  that model available to the handler functions so that they can still call, for example, `request.model.create()
+ 
+**refactores our code**
 ## Running the app
 
 `npm start`
@@ -175,4 +144,4 @@ Unit Tests: npm run test
 
 
 UML Diagram
-![](lab8url.PNG)
+![](lab9url.PNG)
