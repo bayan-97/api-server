@@ -8,6 +8,8 @@ router.get('/categories', getcategoryHandler);
 router.get('/categories/:id', getOnecategoryHandler);
 router.post('/categories', createcategoryHandler);
 router.put('/categories/:id',updatecategoryHandler);
+router.patch('/categories/:id',updatecategoryHandler);
+
 router.delete('/categories/:id', deletecategoryHandler);
 
 

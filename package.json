@@ -18,10 +18,12 @@
   },
   "devDependencies": {
     "@code-fellows/supergoose": "^1.0.11",
+    "eslint": "^7.12.0",
     "jest": "^26.5.3",
     "supertest": "^5.0.0"
   },
   "scripts": {
+    "lint": "eslint '**/*.js'",
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "jest --coverage --verbose"

@@ -8,6 +8,8 @@ router.get('/products', getproductHandler);
 router.get('/products/:id', getOneproductHandler);
 router.post('/products', createproductHandler);
 router.put('/products/:id',updateproductHandler);
+router.patch('/products/:id',updateproductHandler);
+
 router.delete('/products/:id', deleteproductHandler);
 
 
