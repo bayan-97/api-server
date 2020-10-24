@@ -13,6 +13,7 @@ router.patch('/products/:id',updateproductHandler);
 router.delete('/products/:id', deleteproductHandler);
 
 
+
 function getproductHandler(req, res, next) {
   productModel
     .read()
