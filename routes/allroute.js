@@ -13,6 +13,8 @@ router.get('/:model', getAllHandler);
 router.get('/:model/:id', getOneHandler);
 router.post('/:model', createHandler);
 router.put('/:model/:id',updateHandler);
+router.patch('/:model/:id',updateHandler);
+
 router.delete('/:model/:id', deleteHandler);
 
 function getModel(req, res, next) {
